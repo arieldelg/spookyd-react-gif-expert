@@ -1,14 +1,10 @@
 import { Gif } from "../types/customgifTypes";
 
-type Props = {
-  data: Gif;
-};
-
-const CardGif = ({ data }: Props) => {
+const CardGif = ({ id, img, title }: Gif) => {
   return (
-    <div key={data.id} className="card">
-      <p>{data.title}</p>
-      <img src={data.img.url} alt={data.title} width={300} />
+    <div key={id} className="card">
+      <p>{title}</p>
+      <img src={img} alt={title} width={300} />
     </div>
   );
 };

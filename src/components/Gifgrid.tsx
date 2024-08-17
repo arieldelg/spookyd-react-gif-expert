@@ -1,6 +1,6 @@
 import { useFetchGif } from "../hooks/useFetchGif";
-import CardGif from "./CardGif";
-import "./Gifgrid.css";
+import { CardGif } from "./index";
+// import "./Gifgrid.css";
 
 type Props = {
   categories: string;
@@ -16,7 +16,7 @@ const Gifgrid = ({ categories }: Props) => {
         {isLoading && <p>Cargando!!</p>}
         {typeof data !== "string" &&
           isLoading === false &&
-          data.map((element) => <CardGif data={element} key={element.id} />)}
+          data.map((element) => <CardGif {...element} key={element.id} />)}
       </div>
     </div>
   );

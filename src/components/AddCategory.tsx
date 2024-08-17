@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import "./AddCategory.css";
+// import "./AddCategory.css";
 
 type Props = {
   onNewCategory: (value: string) => string[];
@@ -16,7 +16,7 @@ const AddCategory = ({ onNewCategory }: Props) => {
   };
 
   return (
-    <form onSubmit={(e) => handleSumbit(e)}>
+    <form onSubmit={(e) => handleSumbit(e)} aria-label="form">
       <label htmlFor="inputCategory">Add a category</label>
       <div className="containerInput">
         <input
